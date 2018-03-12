@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Social</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="inc/css/style.css">
+    <script src="inc/js/peer.min.js" type="text/javascript"></script>
+    <script src="inc/js/webtorrent.min.js" type="text/javascript"></script>
+    <script src="inc/js/jquery.min.js" type="text/javascript"></script>
+    <script src="inc/js/vue.min.js" type="text/javascript"></script>
+    <script src="inc/js/watch2gether.js" type="text/javascript"></script>
+</head>
+
+<body onload='init()'>
+    <div id='w2g'>
+        <div id='join' class='half'>
+          <h1>Join your friends and Watch2gether!</h1>
+          <h2>Enter the code given to you by a friend to continue</h2>
+          <form id='joinForm'>
+            <input id='friendID' type='text' placeholder='enter code here'>
+            <input id='friendConnect' type='submit' value='Go'>
+          </form>
+        </div>
+
+        <div id='create' class='half'>
+          <div id="readyMessage">
+            <h1> Your ID is </h1><input type='text' v-model='peerid' readonly=""><h2>Share this with friends to get started :) </h2>
+            <p> {{connections.length}} users are currently connected</p>
+            <button v-if="connections.length>0">Start</button>
+          </div>
+          <h2 id='startMessage'>to start, drop a file here</h2>
+        </div>
+        <form id='fileForm' class="box" method="post" action="" enctype="multipart/form-data">
+                <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+body {
+  padding:0;
+  margin:0;
+  background-image:url('../img/bg.jpg');
+  background-size:cover;
+}
+.half{
+  width:50vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction:column;
+  text-align:center;
+}
+
+#create{
+  background-color:rgba(0,0,0,0.6);
+  color:white;
+}
+
+#join{
+  background-color:rgba(255,255,255,0.3);
+}
+
+#w2g {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction:row;
+  width:100vw;
+  height:100vh;
+}
+input[type=text]{
+  background-color:rgba(255,255,255,0.8);
+  border-style: none;
+  padding:10px;
+  width:260px;
+  border-radius:3px;
+  text-align:center;
+  margin:20px;
+  box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#friendID:not(:placeholder-shown)+#friendConnect {
+  border-bottom-right-radius:3px;
+  display:inline-block;
+  border-top-right-radius:3px;
+  border-style:none;
+  margin-left:-28px;
+  background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%);
+  box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  width:100px;
+  padding:10px;
+  transition: width .35s ease-in-out;
+}
+
+#friendConnect{
+    width:0px;
+    margin:0px;
+    padding:0px;
+    border-style:none;
+
+}
+
+#file{
+  width:50vw;
+  height:100vh;
+  opacity:0;
+}
+
+#fileForm{
+  position:absolute;
+  right:0;
+}
+
+#readyMessage{
+  display:none;
+}
+
+#login>*{
+  margin:10px;
+  padding:5px;
+}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.box {
+  background-color:rgba(0,0,0,0.7);
+  border-radius:5px;
+}
